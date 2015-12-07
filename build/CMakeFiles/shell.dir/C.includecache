@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/kjm789/repo/OS_Project3/include/shell.h
+unistd.h
+-
+sys/stat.h
+-
+sys/types.h
+-
+string.h
+-
+limits.h
+-
+stdlib.h
+-
+stdio.h
+-
+fcntl.h
+-
+dirent.h
+-
+stdbool.h
+-
+dyn_array.h
+-
+
+/home/kjm789/repo/OS_Project3/src/shell.c
+../include/shell.h
+/home/kjm789/repo/OS_Project3/include/shell.h
+

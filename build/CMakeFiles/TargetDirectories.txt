@@ -1,0 +1,2 @@
+/home/kjm789/repo/OS_Project3/build/CMakeFiles/shell.dir
+/home/kjm789/repo/OS_Project3/build/CMakeFiles/shell_tester.dir

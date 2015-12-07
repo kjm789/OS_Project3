@@ -1,0 +1,1 @@
+/usr/bin/cc  -std=gnu99 -Wall -Werror -g -O0    CMakeFiles/shell_tester.dir/test/test.c.o  -o shell_tester -rdynamic -lreadline /usr/local/lib/libdyn_array.so -Wl,-rpath,/usr/local/lib 

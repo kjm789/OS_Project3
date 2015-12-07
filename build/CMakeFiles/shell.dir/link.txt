@@ -1,0 +1,1 @@
+/usr/bin/cc  -fPIC -std=gnu99 -Wall -Werror -g -O0   -shared -Wl,-soname,libshell.so -o libshell.so CMakeFiles/shell.dir/src/shell.c.o /usr/local/lib/libdyn_array.so -Wl,-rpath,/usr/local/lib: 
