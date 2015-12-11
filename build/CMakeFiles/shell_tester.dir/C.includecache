@@ -13,6 +13,12 @@ sys/stat.h
 -
 sys/types.h
 -
+sys/wait.h
+-
+sys/ipc.h
+-
+sys/shm.h
+-
 string.h
 -
 limits.h

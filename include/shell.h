@@ -4,6 +4,9 @@
 #include <unistd.h>
 #include <sys/stat.h>
 #include <sys/types.h>
+#include <sys/wait.h>
+#include <sys/ipc.h>
+#include <sys/shm.h>
 #include <string.h>
 #include <limits.h>
 #include <stdlib.h>
@@ -69,6 +72,32 @@ int ls(char* file);
 /// \return error code, < 0 on failure, 0 on success
 ///
 int cat(char* file);
+
+///
+/// Read from two files given columns from each with two process(shm) for each file where will output to a file
+/// \param cmd command struct that holds all entered commands by user
+///	\return success or fail
+///
+void join(Commands_t* cmd); 
+
+///
+/// Child worker to read from a file descritptor a specific file and write to shared memory
+/// \param fd file descriptor for file processN will read from and write into shared memory
+/// \param col_key integer value representing
+/// \p shmId id of shared memory object
+/// \return none
+///
+void child_worker(int fd, int col_key, int shmId);
+
+///
+/// String -> tokens -> dyn_array
+/// \param str c-string to tokenize (1024 char max)
+/// \parm delims c-string of delimiters
+/// \return dyn_array of tokens as c-strings, NULL on error
+///
+dyn_array_t* tokenizer (const char* str, const char* delims);
+
+void dyn_tok_destruct(void *tok_str);
 
 #endif
 
